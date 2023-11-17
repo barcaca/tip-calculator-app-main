@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Tip Calculator APP/Frontier Mentor](https://www.frontendmentor.io/solutions/interactive-rating-component-sassscss-ENpUgZGQIH)
-- Live Site URL: [Vercel App](https://interactive-rating-component-main-lilac-omega.vercel.app)
+- Solution URL: [Tip Calculator APP/Frontier Mentor](https://www.frontendmentor.io/solutions/tip-calculator-appsassscss-NnY4gGJ6O_)
+- Live Site URL: [Vercel App](https://tip-calculator-app-main-blond.vercel.app)
 
 ## My process
 
