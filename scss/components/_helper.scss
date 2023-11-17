@@ -1,0 +1,30 @@
+// ========================== //
+//          HELPER            //
+// ========================== //
+
+@use "../base" as *;
+@use "sass:map";
+
+/*--START HELPER--------------------*/
+.h-hide {
+  display: none;
+}
+
+.h-show {
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  margin-inline: auto;
+}
+
+@each $type, $size in $container-max-widths {
+  @include mq(min, $type) {
+    .#{$type} {
+      max-width: $size;
+    }
+  }
+}
+
+/*--END HELPER--------------------*/

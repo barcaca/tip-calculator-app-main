@@ -1,0 +1,347 @@
+/* GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+/*--START RESET--------------------*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  border: 0 solid transparent;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.5rem;
+}
+
+input {
+  background-repeat: no-repeat;
+  background-position: center left 1rem;
+  border: 1px solid hsl(172, 67%, 45%);
+}
+
+input:focus {
+  outline-color: hsl(183, 100%, 15%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*--END RESET--------------------*/
+/*--START LAYOUT--------------------*/
+.page {
+  display: grid;
+  grid-template-rows: 100px auto 50px;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.page__intro {
+  width: 100px;
+  margin-inline: auto;
+  text-align: center;
+  letter-spacing: 10px;
+  word-wrap: break-word;
+}
+
+/*--END LAYOUT--------------------*/
+/*--START FOOTER-----------*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__attribution {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: hsl(183, 100%, 15%);
+  text-align: center;
+}
+
+.footer__link {
+  color: hsl(186, 14%, 43%);
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: hsl(189, 41%, 97%);
+}
+
+/*--END FOOTER--------------------*/
+/*--START BUTTON--------------------*/
+.btn {
+  padding-block: 0.5rem;
+  font-size: 1.5rem;
+  color: hsl(189, 41%, 97%);
+  border-radius: 0.5rem;
+  transition: background-color 0.3s linear;
+}
+
+.btn--primary {
+  background-color: hsl(183, 100%, 15%);
+}
+
+.btn--primary:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(173, 61%, 77%);
+}
+
+.btn--input {
+  width: 100%;
+  color: hsl(186, 14%, 43%);
+  text-align: center;
+  background-color: hsl(189, 41%, 97%);
+}
+
+.btn--input::-moz-placeholder {
+  color: hsl(186, 14%, 43%);
+}
+
+.btn--input::placeholder {
+  color: hsl(186, 14%, 43%);
+}
+
+.btn--active {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+
+.btn--reset {
+  font-size: 1.25rem;
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+  background-color: hsl(184, 93%, 18%);
+}
+
+.btn--reset--active {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+
+.btn--reset--active:hover {
+  background-color: hsl(189, 41%, 97%);
+}
+
+@media (min-width: 900px) {
+  .btn {
+    padding-block: 0.25rem;
+  }
+
+  .btn--reset {
+    grid-row: 4;
+  }
+}
+
+#billAmount {
+  background-image: url("/images/icon-dollar.svg");
+}
+
+#numberPeople {
+  background-image: url("/images/icon-person.svg");
+}
+
+/*--END BUTTON--------------------*/
+/*--START CARD--------------------*/
+.card {
+  display: grid;
+  gap: 1.25rem;
+  padding: 2rem 1.75rem;
+  color: hsl(186, 14%, 43%);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+}
+
+.card__tip {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.card__option {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card__bill {
+  display: grid;
+  gap: 1rem;
+}
+
+.card__people {
+  display: grid;
+  gap: 1rem;
+}
+
+.card__final {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 1.5rem;
+}
+
+.card__input {
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+  text-align: right;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 0.5rem;
+}
+
+.card__input::-moz-placeholder {
+  color: hsl(185, 41%, 84%);
+}
+
+.card__input::placeholder {
+  color: hsl(185, 41%, 84%);
+}
+
+.card__subtitle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.card__amount {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.card__amount-value {
+  font-size: 1.625rem;
+  color: hsl(172, 67%, 45%);
+  text-align: right;
+}
+
+.card__amount--small {
+  font-size: 0.8125rem;
+  color: hsl(186, 14%, 43%);
+}
+
+@media (min-width: 900px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+  }
+
+  .card__bill {
+    gap: 0.5rem;
+  }
+
+  .card__tip {
+    grid-column: 1;
+    grid-row: 2;
+    gap: 0.5rem;
+  }
+
+  .card__people {
+    grid-column: 1;
+    grid-row: 3;
+    gap: 0.5rem;
+  }
+
+  .card__final {
+    display: grid;
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .card__option {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(2, auto);
+    gap: 0.5rem;
+  }
+
+  .card__input {
+    padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+  }
+
+  .card__amount {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+/*--END CARD--------------------*/
+/*--START HELPER--------------------*/
+.h-hide {
+  display: none;
+}
+
+.h-show {
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  margin-inline: auto;
+}
+
+@media (min-width: 600px) {
+  .sm {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 900px) {
+  .md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .xl {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 2100px) {
+  .xxl {
+    max-width: 1320px;
+  }
+}
+
+/*--END HELPER--------------------*/
+
+/*# sourceMappingURL=e:/Designer/FrontendMentor/tip-calculator-app-main/dist/styles.css.map */

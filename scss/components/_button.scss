@@ -1,0 +1,75 @@
+// ========================== //
+//          BUTTON            //
+// ========================== //
+
+@use "../base" as *;
+@use "sass:map";
+
+//--BUTTON----//
+/*--START BUTTON--------------------*/
+.btn {
+  @include font-style(h4);
+  padding-block: $ss-2;
+  color: $theme-neutral-200;
+  border-radius: $ss-2;
+  transition: background-color 0.3s linear;
+
+  &--primary {
+    background-color: $theme-neutral-600;
+
+    &:hover {
+      color: $theme-neutral-600;
+      background-color: $theme-primary-200;
+    }
+  }
+
+  &--input {
+    width: 100%;
+    color: $theme-neutral-500;
+    text-align: center;
+    background-color: $theme-neutral-200;
+
+    &::placeholder {
+      color: $theme-neutral-500;
+    }
+  }
+
+  &--active {
+    color: $theme-neutral-600;
+    background-color: $theme-primary-100;
+  }
+
+  &--reset {
+    color: $theme-neutral-600;
+    text-transform: uppercase;
+    background-color: hsl(184, 93%, 18%);
+    @include font-style(h5);
+
+    &--active {
+      color: $theme-neutral-600;
+      background-color: $theme-primary-100;
+
+      &:hover {
+        background-color: $theme-neutral-200;
+      }
+    }
+  }
+
+  @include mq(min, md) {
+    padding-block: $ss-1;
+
+    &--reset {
+      grid-row: 4;
+    }
+  }
+}
+
+#billAmount {
+  background-image: url("/images/icon-dollar.svg");
+}
+
+#numberPeople {
+  background-image: url("/images/icon-person.svg");
+}
+
+/*--END BUTTON--------------------*/

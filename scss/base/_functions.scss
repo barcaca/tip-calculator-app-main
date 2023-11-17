@@ -1,0 +1,12 @@
+// ========================== //
+//          FUNCTIONS         //
+// ========================== //
+@use "variables" as *;
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+
+//--FONT SIZE--------------//
+@function fs($size) {
+  @return calc($size / 16) + rem;
+}

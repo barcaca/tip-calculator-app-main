@@ -1,0 +1,111 @@
+// ========================== //
+//           MIXINS           //
+// ========================== //
+
+@use "sass:map";
+@use "breakpoints" as *;
+@use "variables" as *;
+@use "functions" as *;
+
+//--FONT STYLES----//
+@mixin font-style($size: false, $weight: false, $lh: false, $ls: null) {
+  @if map-has-key($font-sizes, $size) {
+    font-size: map-get($font-sizes, $size);
+  } @else if $size ==null {
+    font-size: $size;
+  } @else {
+    font-size: fs($size);
+  }
+
+  font-weight: map-get($font-weight, $weight);
+  line-height: map-get($line-height, $lh);
+  letter-spacing: $ls;
+}
+
+//--MEDIA QUERY---------//
+@mixin mq($mode, $size, $size-2: false) {
+  $value: map-get(
+    $map: $breakpoints,
+    $key: $size,
+  );
+  $value-2: map-get(
+    $map: $breakpoints,
+    $key: $size-2,
+  );
+
+  @if $mode ==max {
+    @media (max-width: #{$value - 1}) {
+      @content;
+    }
+  } @else if $mode ==min {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else if $mode ==between {
+    @media (min-width: $value) and (max-width: $value-2) {
+      @content;
+    }
+  }
+}
+
+//--FLEX----//
+@mixin flex(
+  $direction: column,
+  $justify: center,
+  $align: center,
+  $gap: null
+) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+//--GRID----//
+@mixin grid(
+  $columns: null,
+  $rows: null,
+  $gap: null,
+  $row-gap: null,
+  $column-gap: null
+) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+}
+
+
+//--CONTAINER----//
+
+$container-max-widths: (
+  sm: 450px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+@mixin wrapper($type: null) {
+
+  @if $type ==null {
+    width: 100%;
+  }
+
+  @if $type ==sm {
+    max-width: map-get($container-max-widths, $type);
+  } @else if $type ==md {
+    max-width: map-get($container-max-widths, $type);
+  } @else if $type ==lg {
+    max-width: map-get($container-max-widths, $type);
+  } @else if $type ==xl {
+    max-width: map-get($container-max-widths, $type);
+  } @else if $type ==xxl {
+    max-width: map-get($container-max-widths, $type);
+  } @else {
+    max-width: $type;
+  }
+  margin-inline: auto;
+}

@@ -1,0 +1,45 @@
+// ========================== //
+//           PAGE             //
+// ========================== //
+
+@use "../base" as *;
+
+/*--START LAYOUT--------------------*/
+.page {
+  @include grid($rows: 100px auto 50px);
+  align-items: center;
+  height: 100vh;
+  background-color: $theme-neutral-300;
+
+  &__intro {
+    width: 100px;
+    margin-inline: auto;
+    text-align: center;
+    letter-spacing: 10px;
+    word-wrap: break-word;
+  }
+}
+
+/*--END LAYOUT--------------------*/
+
+/*--START FOOTER-----------*/
+.footer {
+  @include flex();
+
+  &__attribution {
+    @include font-style(12, regular);
+    color: $theme-neutral-600;
+    text-align: center;
+  }
+
+  &__link {
+    color: $theme-neutral-500;
+    text-decoration: none;
+
+    &:hover {
+      color: $theme-neutral-200;
+    }
+  }
+}
+
+/*--END FOOTER--------------------*/

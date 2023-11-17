@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link type="image/png" href="./images/favicon-32x32.png" rel="icon" sizes="32x32">
+    <link href="/dist/styles.css" rel="stylesheet">
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body class="page">
+    <div class="page__intro">
+      <h1>SPLITTER</h1>
+    </div>
+    <div class="wrapper sm md lg">
+      <main class="card">
+        <div class="card__bill">
+          <div class="card__title">Bill</div>
+          <input class="card__input" id="billAmount" type="text" placeholder="0">
+        </div>
+        <div class="card__tip">
+          <div class="card__title">Select Tip %</div>
+
+          <div class="card__option">
+            <button class="btn btn--primary tip" type="button" onclick="setTip(5)">5%</button>
+            <button class="btn btn--primary tip" type="button" onclick="setTip(10)">10%</button>
+            <button class="btn btn--primary tip" type="button" onclick="setTip(15)">15%</button>
+            <button class="btn btn--primary tip" type="button" onclick="setTip(25)">25%</button>
+            <button class="btn btn--primary tip" type="button" onclick="setTip(50)">50%</button>
+            <input class="btn btn--input" id="customTip" type="number" min="1" max="100" placeholder="CUSTOM" oninput="setCustomTip(this.value)">
+          </div>
+        </div>
+        <div class="card__people">
+          Number of People
+          <input class="card__input" id="numberPeople" type="text" placeholder="1">
+        </div>
+        <div class="card__final">
+          <div class="card__subtitle">
+            <div class="card__amount">
+              Tip Amount
+              <span class="card__amount--small">/ person</span>
+            </div>
+            <div class="card__amount-value" id="tipAmount">$0.00</div>
+          </div>
+          <div class="card__subtitle">
+            <div class="card__amount">
+              Total
+              <span class="card__amount--small">/ person</span>
+            </div>
+            <div class="card__amount-value" id="totalAmount">$0.00</div>
+          </div>
+          <button class="btn btn--reset" id="buttonReset" type="button" onclick="resetValues()">Reset</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- START FOOTER -->
+    <footer class="footer">
+      <!--FOOTER ATTRIBUTION -->
+      <p class="footer__attribution">
+        Challenge by
+        <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" rel="noopener" target="_blank">Frontend Mentor</a>. Coded by
+        <a class="footer__link" href="https://www.frontendmentor.io/profile/Barcaca" rel="noopener" target="_blank">Luan Barcaça</a>.
+      </p>
+    </footer>
+    <!-- END FOOTER -->
+    <!-- SCRIPT -->
+    <script src="script.js">
+    </script>
+    <!-- <script src="script2.js">
+    </script> -->
+  </body>
+</html>

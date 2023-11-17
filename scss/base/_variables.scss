@@ -1,0 +1,134 @@
+//------------------------//
+//       VARIÁVEIS        //
+//------------------------//
+
+//--GOOGLE FONTS-----//
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+//--FONTS FAMILY-----//
+$ff-body: 'Space Mono', monospace;
+
+//--FONTS WEIGTH-----//
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+
+$font-weight : (
+  "regular":     $fw-400,
+  "medium":      $fw-500,
+  "semibold":    $fw-600,
+  "bold":        $fw-700
+);
+
+//--FONTS SIZES-------//
+$fsize-base:    1rem;  // 16
+$fsize-sm:      $fsize-base * .875; // 14
+$fsize-lg:      $fsize-base * 1.25; // 20
+$fsize-h1:      $fsize-base * 2.5;  // 40
+$fsize-h2:      $fsize-base * 2;    // 32
+$fsize-h3:      $fsize-base * 1.75; // 28
+$fsize-h4:      $fsize-base * 1.5;  // 24
+$fsize-h5:      $fsize-base * 1.25; // 20
+$fsize-h6:      $fsize-base;
+
+$font-sizes: (
+  "base": $fsize-base,
+  "sm":   $fsize-sm,
+  "lg":   $fsize-lg,
+  "h1":   $fsize-h1,
+  "h2":   $fsize-h2,
+  "h3":   $fsize-h3,
+  "h4":   $fsize-h4,
+  "h5":   $fsize-h5,
+  "h6":   $fsize-h6
+);
+
+//--LINE HEIGHT-----//
+$line-h-base: 1.5;
+$line-h-xs:   1.15;
+$line-h-sm:   1.25;
+$line-h-md:   1.4;
+$line-h-lg:   2;
+
+$line-height: (
+  "base" : $line-h-base,
+  "xs" :   $line-h-xs,
+  "sm" :   $line-h-sm,
+  "md" :   $line-h-md,
+  "lg" :   $line-h-lg,
+);
+
+//--SIZES & SPACE------//
+$ss-1: 0.25rem;    // 4  if 1rem=16
+$ss-2: 0.5rem;     // 8
+$ss-3: 0.75rem;    // 12
+$ss-4: 1rem;       // 16
+$ss-5: 1.25rem;    // 20
+$ss-6: 1.5rem;     // 24
+$ss-7: 1.75rem;    // 28
+$ss-8: 2rem;       // 32
+$ss-9: 2.5rem;     // 40
+$ss-10: 3rem;      // 48
+$ss-11: 3.25rem;   // 52
+$ss-12: 3.5rem;    // 56
+$ss-13: 3.75rem;   // 60
+$ss-14: 4rem;      // 64
+$ss-15: 4.5rem;    // 72
+
+//--COLOR SYSTEM----//
+
+//--PRIMARY COLOR ----//
+$theme-color-100:     hsl(172, 67%, 45%);
+$theme-color-200:     hsl(173, 61%, 77%);
+
+$theme-primary-100:    $theme-color-100;
+$theme-primary-200:    $theme-color-200;
+
+//--NEUTRAL COLOR ----//
+$color-white:                  hsl(0,0%,100%);
+$color--very-light-gray-cyan:  hsl(189, 41%, 97%);
+$color-light-gray-cyan:        hsl(185, 41%, 84%);
+$color-gray-cyan:              hsl(184, 14%, 56%);
+$color-dark-gray-cyan:         hsl(186, 14%, 43%);
+$color-very-dark-cyan:         hsl(183, 100%, 15%);
+
+
+$theme-neutral-100: $color-white;
+$theme-neutral-200: $color--very-light-gray-cyan;
+$theme-neutral-300: $color-light-gray-cyan;
+$theme-neutral-400: $color-gray-cyan;
+$theme-neutral-500: $color-dark-gray-cyan;
+$theme-neutral-600: $color-very-dark-cyan;
+
+//--BOX SHADOW----//
+$box-shadow-1:
+0 1px 1px rgba(0,0,0,0.15),
+0 2px 2px rgba(0,0,0,0.15),
+0 4px 4px rgba(0,0,0,0.15),
+0 8px 8px rgba(0,0,0,0.15);
+
+$box-shadow-2:
+0 1px 1px rgba(0,0,0,0.12),
+0 2px 2px rgba(0,0,0,0.12),
+0 4px 4px rgba(0,0,0,0.12),
+0 8px 8px rgba(0,0,0,0.12),
+0 16px 16px rgba(0,0,0,0.12);
+
+$box-shadow-3:
+0 2px 4px rgba(0,0,0, .075);
+
+$box-shadow-4:
+0 2px 4px rgba(0,0,0, .075);
+
+$box-shadow-5:
+0 0 0 7px  rgba(0, 0, 0, 0.1),
+0 0 0 14px rgba(0, 0, 0, 0.1),
+0 0 0 21px rgba(0, 0, 0, 0.1);
+
+$shadow-sharp:   $box-shadow-1;
+$shadow-diffuse: $box-shadow-2;
+$shadow-sm:      $box-shadow-3;
+$shadow-lg:      $box-shadow-4;
+$shadow-layers:  $box-shadow-5;

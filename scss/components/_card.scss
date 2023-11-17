@@ -1,0 +1,114 @@
+// ========================== //
+//           CARD             //
+// ========================== //
+
+@use "../base" as *;
+@use "sass:map";
+
+//--CARD----//
+/*--START CARD--------------------*/
+.card {
+  @include grid($gap: $ss-5);
+  padding: $ss-8 $ss-7;
+  color: $theme-neutral-500;
+  background-color: $theme-neutral-100;
+  border-radius: $ss-6;
+
+  &__tip {
+    @include grid($gap: $ss-5);
+  }
+
+  &__option {
+    @include grid(1fr 1fr, $gap: $ss-4);
+  }
+
+  &__bill {
+    @include grid($gap: $ss-4);
+  }
+
+  &__people {
+    @include grid($gap: $ss-4);
+  }
+
+  &__final {
+    @include grid($gap: $ss-4);
+    padding: $ss-6;
+    background-color: $theme-neutral-600;
+    border-radius: $ss-6;
+  }
+
+  &__input {
+    @include font-style(h4, bold);
+    padding: $ss-3;
+    color: $theme-neutral-500;
+    text-align: right;
+    background-color: $theme-neutral-200;
+    border-radius: $ss-2;
+
+    &::placeholder {
+      color: $theme-neutral-300;
+    }
+  }
+
+  &__subtitle {
+    @include grid(1fr 1fr);
+    @include font-style(base);
+    color: $theme-neutral-100;
+  }
+
+  &__amount {
+    @include grid($rows: 1fr 1fr);
+
+    &-value {
+      @include font-style(26);
+      color: $theme-primary-100;
+      text-align: right;
+    }
+
+    &--small {
+      @include font-style(13);
+      color: $theme-neutral-500;
+    }
+  }
+
+  @include mq(min, md) {
+    @include grid(1fr 1fr, repeat(3, auto), $column-gap: $ss-8);
+
+    &__bill {
+      gap: $ss-2;
+    }
+
+    &__tip {
+      grid-column: 1;
+      grid-row: 2;
+      gap: $ss-2;
+    }
+
+    &__people {
+      grid-column: 1;
+      grid-row: 3;
+      gap: $ss-2;
+    }
+
+    &__final {
+      @include grid($rows: repeat(4, 1fr));
+      grid-column: 2;
+      grid-row: 1 / span 3;
+    }
+
+    &__option {
+      @include grid(auto auto auto, repeat(2, auto), $ss-2);
+    }
+
+    &__input {
+      padding: $ss-1 $ss-2 $ss-1 $ss-1;
+    }
+
+    &__amount {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+    }
+  }
+}
+
+/*--END CARD--------------------*/
